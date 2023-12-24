@@ -9,7 +9,13 @@
     .main-container {
       background-color: #222;
       border: 1px solid #444;
-      padding: 144px;
+      padding: 1rem;
+      /* Use padding instead of fixed pixel values for flexibility */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Ensure it fills the viewport height */
     }
 
     .container {
@@ -17,68 +23,59 @@
       margin-bottom: 20px;
       border: 3px solid #333;
       box-shadow: #555;
-       margin: auto;
-       margin-bottom: 20px;
-       width: 21rem;
-       height: 21rem;
-       margin-top: 1rem;
+      max-width: 500px; /* Set a maximum width for larger screens */
+      border-radius: 5px; /* Add some rounded corners */
+    }
+
+    .container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
 
     .container p {
       color: #fff;
-      font-size: 24px;
+      font-size: 18px;
       font-weight: bold;
     }
 
     .container a {
       margin: 0 10px;
       color: #fff;
-      font-size: 18px;
+      font-size: 16px;
+      text-decoration: none;
     }
 
     .container a i {
-      font-size: 24px;
+      font-size: 20px;
     }
 
-    .profile-picture {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    .profile-picture-upload {
-      cursor: pointer;
-    }
-    p{
-        color: #fff;
-        font-weight: 300;
-        font-style: oblique;
-    }
-    h1{
+    h1, h4 {
       color: #fff;
-      font-weight: 600;
+      text-align: center;
     }
-    h4{
-    color: #fff;
+
+    @media (max-width: 768px) {
+      .container {
+        margin-bottom: 1rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="main-container">
-
     <div class="container">
-        <div class="profile-picture-upload">
-            <img src="https://via.placeholder.com/100x100" alt="Profile Picture" class="profile-picture">
-          </div>
-    
-        <h1>Jambong Ralpher</h1>
+      <img src="https://via.placeholder.com/100x100" alt="Profile Picture" class="profile-picture">
+      <h1>Jambong Ralpher</h1>
       <p>Welcome don't be a Stranger</p>
       <h4>Am an Aspiring Software Engineer</h4>
-      <a href="https://github.com/Ralpher22" target="_blank"><i class="bx bxl-github"></i></a>
-      <a href="https://www.instagram.com/your-instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/jambong-ralpher-375a68267/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-      <a href="https://wa.me/237658829883" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+      <div class="social-links">
+        <a href="https://github.com/Ralpher22" target="_blank"><i class="bx bxl-github"></i></a>
+        <a href="https://www.instagram.com/Ralpher_studio" target="_blank"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/jambong-ralpher-375a68267/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://wa.me/237658829883" target="_blank"><i class="bx bxl-whatsapp"></i></a>
+      </div>
     </div>
   </div>
 </body>
